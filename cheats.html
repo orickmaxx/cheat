@@ -188,18 +188,6 @@
     </style>
 </head>
 <body>
-    <div class="snowflake">
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-        <div class="snow">&#10052;</div>
-    </div>
     <div class="header">
         <h1 class="title">CHEATS DO RICK</h1>
         <div class="divider"></div>
@@ -257,27 +245,6 @@
     </footer>
 
     <script>
-        // Função para criar flocos de neve
-        function createSnowflake() {
-            const snowflake = document.createElement('div');
-            snowflake.classList.add('snowflake');
-            snowflake.textContent = '❄';
-            snowflake.style.left = Math.random() * window.innerWidth + 'px';
-            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
-            snowflake.style.opacity = Math.random();
-            snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
-
-            document.body.appendChild(snowflake);
-
-            // Remove o floco de neve após o término da animação
-            snowflake.addEventListener('animationend', () => {
-                snowflake.remove();
-            });
-        }
-
-        // Gerar flocos de neve continuamente
-        setInterval(createSnowflake, 100);
-
         function isLoggedIn() {
             return localStorage.getItem('authToken') !== null;
         }
@@ -341,6 +308,25 @@
         copyButtonAlura.addEventListener('click', () => {
             window.location.href = 'https://raw.githubusercontent.com/marcos10pc/Alura-Destroyer/refs/heads/main/script.js';
         });
+    </script>
+	<script>
+        function createSnowflake() {
+        const snowflake = document.createElement("div");
+        snowflake.classList.add("snow");
+        snowflake.innerHTML = "&#10052;";
+        snowflake.style.left = Math.random() * window.innerWidth + "px";
+        snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+        snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
+        snowflake.style.opacity = Math.random();
+
+        document.body.appendChild(snowflake);
+
+        setTimeout(() => {
+            snowflake.remove();
+        }, 5000); // Remove após a animação
+    }
+
+    setInterval(createSnowflake, 200); // Cria novos flocos a cada 200ms
     </script>
 </body>
 </html>
