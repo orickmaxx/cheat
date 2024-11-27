@@ -244,6 +244,27 @@
     </footer>
 
     <script>
+        // Função para criar flocos de neve
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.textContent = '❄';
+            snowflake.style.left = Math.random() * window.innerWidth + 'px';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            snowflake.style.opacity = Math.random();
+            snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+
+            document.body.appendChild(snowflake);
+
+            // Remove o floco de neve após o término da animação
+            snowflake.addEventListener('animationend', () => {
+                snowflake.remove();
+            });
+        }
+
+        // Gerar flocos de neve continuamente
+        setInterval(createSnowflake, 100);
+
         function isLoggedIn() {
             return localStorage.getItem('authToken') !== null;
         }
