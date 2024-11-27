@@ -188,6 +188,18 @@
     </style>
 </head>
 <body>
+    <div class="snowflake">
+        <div class="snow">&#10052;</div>
+        <div class="snow">&#10052;</div>
+        <div class="snow">&#10052;</div>
+        <div class="snow">&#10052;</div>
+        <div class="snow">&#10052;</div>
+        <div class="snow">&#10052;</div>
+        <div class="snow">&#10052;</div>
+        <div class="snow">&#10052;</div>
+        <div class="snow">&#10052;</div>
+        <div class="snow">&#10052;</div>
+    </div>
     <div class="header">
         <h1 class="title">CHEATS DO RICK</h1>
         <div class="divider"></div>
@@ -245,6 +257,29 @@
     </footer>
 
     <script>
+        function createSnowflake() {
+        const snowflake = document.createElement("div");
+        snowflake.classList.add("snow");
+        snowflake.innerHTML = "&#10052;";
+        snowflake.style.left = Math.random() * window.innerWidth + "px";
+        snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+        snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
+        snowflake.style.opacity = Math.random();
+
+        document.body.appendChild(snowflake);
+
+        setTimeout(() => {
+            snowflake.remove();
+        }, 5000); // Remove após a animação
+    }
+
+    setInterval(createSnowflake, 200); // Cria novos flocos a cada 200ms
+</script>
+
+
+        // Gerar flocos de neve continuamente
+        setInterval(createSnowflake, 100);
+
         function isLoggedIn() {
             return localStorage.getItem('authToken') !== null;
         }
@@ -311,22 +346,28 @@
     </script>
 	<script>
         function createSnowflake() {
+        // Cria um elemento div para o floco de neve
         const snowflake = document.createElement("div");
         snowflake.classList.add("snow");
-        snowflake.innerHTML = "&#10052;";
-        snowflake.style.left = Math.random() * window.innerWidth + "px";
-        snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
-        snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
-        snowflake.style.opacity = Math.random();
+        snowflake.innerHTML = "&#10052;"; // Código Unicode para o floco de neve
 
+        // Define posição inicial e tamanho aleatórios
+        snowflake.style.left = Math.random() * window.innerWidth + "px"; // Posição horizontal aleatória
+        snowflake.style.fontSize = Math.random() * 10 + 10 + "px"; // Tamanho entre 10px e 20px
+        snowflake.style.animationDuration = Math.random() * 5 + 3 + "s"; // Duração da queda entre 3s e 8s
+        snowflake.style.opacity = Math.random(); // Transparência aleatória
+
+        // Adiciona o floco ao body
         document.body.appendChild(snowflake);
 
+        // Remove o floco de neve após o término da animação
         setTimeout(() => {
             snowflake.remove();
-        }, 5000); // Remove após a animação
+        }, 8000); // Tempo maior que a duração da animação
     }
 
-    setInterval(createSnowflake, 200); // Cria novos flocos a cada 200ms
-    </script>
+    // Gera novos flocos de neve a cada 200ms
+    setInterval(createSnowflake, 200);
+</script>
 </body>
 </html>

@@ -17,7 +17,7 @@ h1 {
     margin: 0;
 }
 
-/* Efeito de neve */
+/* Container para os flocos de neve */
 .initial-snow {
     position: fixed;
     top: 0;
@@ -25,9 +25,10 @@ h1 {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    pointer-events: none;
+    pointer-events: none; /* Permite interação com a página */
 }
 
+/* Estilo dos flocos de neve */
 .snow {
     position: absolute;
     top: -10px;
