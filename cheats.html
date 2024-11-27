@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHEATS DO RICK</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background-color: #000;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: #1a1a1a;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .title {
+            font-size: 3rem;
+            background: radial-gradient(circle at -20.71% 50%, #006de7 0%, #0069eb 8.33%, #0064ec 16.67%, #005eea 25%, #0057e5 33.33%, #004dde 41.67%, #4d42d4 50%, #7334c8 58.33%, #8d20ba 66.67%, #a100aa 75%, #b10099 83.33%, #bd0088 91.67%, #c50075 100%);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: gradientAnimation 5s ease-in-out infinite;
+        }
+
+        .divider {
+            height: 2px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            background: radial-gradient(circle at -20.71% 50%, #006de7 0%, #0069eb 8.33%, #0064ec 16.67%, #005eea 25%, #0057e5 33.33%, #004dde 41.67%, #4d42d4 50%, #7334c8 58.33%, #8d20ba 66.67%, #a100aa 75%, #b10099 83.33%, #bd0088 91.67%, #c50075 100%);
+            background-size: 400% 400%;
+            animation: gradientAnimation 5s ease-in-out infinite;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .nav a {
+            background: radial-gradient(circle at -20.71% 50%, #006de7 0%, #0069eb 8.33%, #0064ec 16.67%, #005eea 25%, #0057e5 33.33%, #004dde 41.67%, #4d42d4 50%, #7334c8 58.33%, #8d20ba 66.67%, #a100aa 75%, #b10099 83.33%, #bd0088 91.67%, #c50075 100%);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            color: transparent;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0 5px;
+            transition: color 0.3s;
+            position: relative;
+            overflow: hidden;
+            animation: gradientAnimation 5s ease-in-out infinite;
+        }
+
+        .nav a:hover {
+            color: white;
+        }
+
+        .nav a::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(75, 0, 130, 0.6);
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 0;
+        }
+
+        .nav a:hover::after {
+            opacity: 1;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .bookmarklet {
+            background-color: #2d2d2d;
+            border: 1px solid #444;
+            border-radius: 6px;
+            padding: 15px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+            width: 280px;
+            text-align: left;
+            transition: background-color 0.3s;
+            margin: 10px;
+            min-height: 150px;
+            overflow: hidden;
+        }
+
+        .bookmarklet:hover {
+            background-color: #3a3a3a;
+        }
+
+        .bookmarklet h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .bookmarklet p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #6a0dad;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #4b0082;
+        }
+
+        .message {
+            margin-top: 10px;
+            color: #8bc34a;
+            display: none;
+        }
+
+        .section {
+            display: none;
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        .active {
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: radial-gradient(circle at -20.71% 50%, #006de7 0%, #b10099 83.33%, #c50075 100%);
+            background-size: 400% 400%;
+            animation: gradientAnimation 5s ease-in-out infinite;
+        }
+
+        .footer-text {
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">CHEATS DO RICK</h1>
+        <div class="divider"></div>
+    </div>
+    <div class="nav">
+        <a href="#khanrick" class="nav-link" data-target="khanrick">KHANRICK</a>
+        <a href="#cms" class="nav-link" data-target="cms">CMSP</a>
+        <a href="#speak" class="nav-link" data-target="speak">SPEAK</a>
+        <a href="#alura" class="nav-link" data-target="alura">ALURA</a>
+    </div>
+    <div class="content">
+        <div class="bookmarklet section active" id="khanrick">
+            <h3><span style="color: white;">KHAN</span><span style="color: #FA4437;">RICK🎅</span></h3>
+            <p>Este é um serviço pago. Clique abaixo para acessar.</p>
+            <a href="javascript:void(0);" class="button" id="copyButtonPago">Copiar Bookmarklet</a>
+            <p id="successMessagePago" class="message">Bookmarklet copiado para a área de transferência!</p>
+        </div>
+
+        <div class="bookmarklet section" id="cms">
+            <h3><span style="color: #0000CD;">CMSP</span></h3>
+            <p>Conteúdo do CMSP aqui.</p>
+            <a href="https://doritus.mmrcoss.tech/coisas" target="_blank" class="button">Acessar CMSP</a>
+        </div>
+
+        <div class="bookmarklet section" id="speak">
+            <h3><span style="color: #FF0000;">SP</span>EAK</h3>
+            <p>Conteúdo do SPEAK aqui.</p>
+            <a href="javascript:void(0);" class="button" id="copyButtonSpeak">Copiar Bookmarklet</a>
+            <p id="successMessageSpeak" class="message">Bookmarklet copiado para a área de transferência!</p>
+        </div>
+
+        <div class="bookmarklet section" id="alura">
+            <h3>ALURA</h3>
+            <p>Escolha uma opção abaixo:</p>
+            <div class="bookmarklet" style="margin-top: 10px;">
+                <h4>Copiar Código Alura</h4>
+                <p>Clique abaixo para acessar o código:</p>
+                <a href="javascript:void(0);" class="button" id="copyButtonAlura">Acessar Código</a>
+            </div>
+            <div class="bookmarklet" style="margin-top: 10px;">
+                <h4>Instalar Tampermonkey - FIREFOX</h4>
+                <p>Clique abaixo para instalar a extensão no Firefox:</p>
+                <a href="https://addons.mozilla.org/pt-BR/firefox/addon/tampermonkey/" target="_blank" class="button">Tampermonkey - FIREFOX</a>
+            </div>
+            <div class="bookmarklet" style="margin-top: 10px;">
+                <h4>Instalar Tampermonkey - CHROME</h4>
+                <p>Clique abaixo para instalar a extensão no Chrome:</p>
+                <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank" class="button">Tampermonkey - CHROME</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer-text">Aproveite, se MINHA MULHER mandar eu apago🤭</p>
+    </footer>
+
+    <script>
+        function isLoggedIn() {
+            return localStorage.getItem('authToken') !== null;
+        }
+
+        if (!isLoggedIn()) {
+            window.location.href = 'https://cheatrick.vercel.app/';
+        }
+
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('.section');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const targetId = link.getAttribute('data-target');
+
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+            });
+        });
+
+        const copyButtonPago = document.getElementById('copyButtonPago');
+        const successMessagePago = document.getElementById('successMessagePago');
+
+        copyButtonPago.addEventListener('click', () => {
+            const bookmarkletCode = 'javascript:fetch("https://raw.githubusercontent.com/orickmaxx/khanrick/refs/heads/main/HM.js").then(t=>t.text()).then(eval);';
+
+            navigator.clipboard.writeText(bookmarkletCode).then(() => {
+                successMessagePago.style.display = 'block';
+                setTimeout(() => {
+                    successMessagePago.style.display = 'none';
+                }, 3000);
+            }).catch(err => {
+                console.error('Falha ao copiar: ', err);
+            });
+        });
+
+        const copyButtonSpeak = document.getElementById('copyButtonSpeak');
+        const successMessageSpeak = document.getElementById('successMessageSpeak');
+
+        copyButtonSpeak.addEventListener('click', () => {
+            const bookmarkletCode = 'javascript:fetch(`https://res.cloudinary.com/dq36xqdoe/raw/upload/v${Math.floor(Math.random() * 1000000)}/main_oqidn5.js`).then(r => r.text()).then(r => eval(r))';
+
+            navigator.clipboard.writeText(bookmarkletCode).then(() => {
+                successMessageSpeak.style.display = 'block';
+                setTimeout(() => {
+                    successMessageSpeak.style.display = 'none';
+                }, 3000);
+            }).catch(err => {
+                console.error('Falha ao copiar: ', err);
+            });
+        });
+
+        const copyButtonAlura = document.getElementById('copyButtonAlura');
+        copyButtonAlura.addEventListener('click', () => {
+            window.location.href = 'https://raw.githubusercontent.com/marcos10pc/Alura-Destroyer/refs/heads/main/script.js';
+        });
+    </script>
+</body>
+</html>
